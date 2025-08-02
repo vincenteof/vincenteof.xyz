@@ -1,3 +1,5 @@
+import { techIcons } from './tech-icons';
+
 export const experiences = [
   {
     company: 'Top3 Crypto Exchange',
@@ -5,7 +7,11 @@ export const experiences = [
     period: 'Aug 2023 - Present',
     location: 'Remote',
     logo: '/images/bitcoin.png', // Placeholder logo
-    technologies: ['React', 'Nextjs', 'TypeScript', 'UMI', 'Ant Design'],
+    technologies: [
+        { name: 'React', icon: techIcons['React'] },
+        { name: 'Next.js', icon: techIcons['Next.js'] },
+        { name: 'TypeScript', icon: techIcons['TypeScript'] },
+    ],
     achievements: [
       'Led the development of a new e-commerce platform, resulting in a 20% increase in sales.',
       'Optimized application performance, reducing page load times by 30%.',
@@ -21,14 +27,10 @@ export const experiences = [
     companyUrl: 'https://www.xtransfer.com/',
     linkedinUrl: 'https://www.linkedin.com/company/xtransfer.cn/',
     technologies: [
-      'Node.js',
-      'React',
-      'React Native',
-      'Express',
-      'Typescript',
-      'Webpack',
-      'Rollup',
-      'Qiankun',
+        { name: 'Node.js', icon: techIcons['Node.js'] },
+        { name: 'React', icon: techIcons['React'] },
+        { name: 'Express', icon: techIcons['Express'] },
+        { name: 'TypeScript', icon: techIcons['TypeScript'] },
     ],
     achievements: [
       'Built and launched over 15 responsive websites for clients across various industries.',
@@ -45,10 +47,8 @@ export const experiences = [
     companyUrl: 'https://sh.58.com/',
     linkedinUrl: 'https://www.linkedin.com/company/58.com',
     technologies: [
-      'React',
-      'Antd Design',
-      'Typescript',
-      'Single SPA',
+        { name: 'React', icon: techIcons['React'] },
+        { name: 'TypeScript', icon: techIcons['TypeScript'] },
     ],
     achievements: [
       'Built and launched over 15 responsive websites for clients across various industries.',

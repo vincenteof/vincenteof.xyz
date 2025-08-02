@@ -6,6 +6,10 @@ import { MdLanguage } from 'react-icons/md';
 import { AiOutlineLinkedin } from 'react-icons/ai';
 import { Tooltip } from 'react-tooltip';
 
+import Tag from './Tag';
+
+import { IconType } from 'react-icons';
+
 interface ExperienceItemProps {
   experience: {
     company: string;
@@ -15,7 +19,10 @@ interface ExperienceItemProps {
     logo: string;
     companyUrl?: string;
     linkedinUrl?: string;
-    technologies: string[];
+    technologies: {
+      name: string;
+      icon: IconType;
+    }[];
     achievements: string[];
   };
 }
@@ -26,7 +33,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
   const linkedinTooltipId = `${companyId}-linkedin-tooltip`;
 
   return (
-    <div className="mb-12 p-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow transition-all duration-300">
+    <div className="mb-12 p-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300">
       {/* Part 1: Company Info, Role, Date, Location */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-start">
@@ -84,9 +91,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
       <div className="mb-4">
         <div className="flex flex-wrap gap-2">
           {experience.technologies.map((tech, index) => (
-            <span key={index} className="bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm font-medium">
-              {tech}
-            </span>
+            <Tag key={index} text={tech.name} icon={tech.icon} />
           ))}
         </div>
       </div>

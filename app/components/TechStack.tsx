@@ -4,6 +4,8 @@ import React from 'react';
 import { skillCategories } from '@/data/skills';
 import { Tooltip } from 'react-tooltip';
 
+import Tag from './Tag';
+
 const TechStack = () => {
   return (
     <section id="tech-stack" className="py-20">
@@ -20,14 +22,10 @@ const TechStack = () => {
                 <h3 className="text-xl font-semibold mb-5 text-gray-800 dark:text-gray-200">{category.title}</h3>
                 <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill, skillIndex) => {
-                    const Icon = skill.icon;
                     const tooltipId = `skill-tag-tooltip-${index}-${skillIndex}`;
                     return (
                       <div key={skillIndex} data-tooltip-id={tooltipId}>
-                        <div className="flex items-center gap-2 px-3 py-1.5 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer">
-                          <Icon className="text-lg" />
-                          <span>{skill.name}</span>
-                        </div>
+                        <Tag text={skill.name} icon={skill.icon} />
                         <Tooltip id={tooltipId} content={skill.name} place="top" />
                       </div>
                     );

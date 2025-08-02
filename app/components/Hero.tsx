@@ -14,6 +14,7 @@ import { RiTwitterXLine } from 'react-icons/ri'
 import { SiTypescript, SiNextdotjs, SiBun } from 'react-icons/si'
 import { LuSend } from 'react-icons/lu'
 import { Tooltip } from 'react-tooltip'
+import Tag from './Tag';
 
 const Hero = () => {
   return (
@@ -35,27 +36,13 @@ const Hero = () => {
           <p className="text-base sm:text-lg mb-6 lg:text-lg mt-4">
             I'm a full-stack developer passionate about building interactive web
             applications. I work primarily with{' '}
-            <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm font-bold">
-              <SiTypescript className="mr-1" /> TypeScript
-            </span>
-            ,{' '}
-            <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm font-bold">
-              <FaReact className="mr-1" /> React
-            </span>
-            ,{' '}
-            <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm font-bold">
-              <SiNextdotjs className="mr-1" /> Next.js
-            </span>
-            , and{' '}
-            <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm font-bold">
-              <SiBun className="mr-1" /> Bun
-            </span>
+            <Tag text="TypeScript" icon={SiTypescript} />,
+            <Tag text="React" icon={FaReact} />,
+            <Tag text="Next.js" icon={SiNextdotjs} />,
+            and <Tag text="Bun" icon={SiBun} />
             . I'm also deeply interested in{' '}
             <span className="font-bold">smart contracts</span> and{' '}
-            <span className="inline-flex items-center bg-blue-100 text-blue-800 px-2 py-1 rounded-md text-sm font-bold">
-              <FaEthereum className="mr-1" /> Ethereum
-            </span>{' '}
-            related technologies. In my personal time, I explore anything that
+            <Tag text="Ethereum" icon={FaEthereum} /> related technologies. In my personal time, I explore anything that
             sparks my curiosity, enriching my life with a broader range of
             experiences.
           </p>

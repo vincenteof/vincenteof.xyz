@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { experiences } from '@/data/experience';
 import ExperienceItem from './ExperienceItem';
