@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 const Header = () => {
-  // todo: border-primary/5
+  // todo: border-primary/5 hover-underline
   return (
     <header className="fixed top-5 left-0 right-0 z-50 transition-all duration-300">
       <div className="w-sm lg:container mx-auto transition-all duration-500 ease-in-out">
