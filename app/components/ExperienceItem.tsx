@@ -26,7 +26,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
   const linkedinTooltipId = `${companyId}-linkedin-tooltip`;
 
   return (
-    <div className="mb-12 p-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300">
+    <div className="mb-12 p-6 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow transition-all duration-300">
       {/* Part 1: Company Info, Role, Date, Location */}
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-start">
