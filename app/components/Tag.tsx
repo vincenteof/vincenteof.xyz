@@ -10,7 +10,7 @@ interface TagProps {
 
 const Tag: React.FC<TagProps> = ({ text, icon: Icon, className }) => {
   return (
-    <div
+    <span
       className={`
         inline-flex items-center gap-1.5 
         px-2.5 py-1 
@@ -24,7 +24,7 @@ const Tag: React.FC<TagProps> = ({ text, icon: Icon, className }) => {
     >
       {Icon && <Icon className="text-base" />}
       <span>{text}</span>
-    </div>
+    </span>
   );
 };
 
