@@ -1,1 +1,1 @@
-# app 跟上直接 use client
+# app root 上直接 use client

@@ -49,6 +49,7 @@ export const experiences = [
     technologies: [
         { name: 'React', icon: techIcons['React'] },
         { name: 'TypeScript', icon: techIcons['TypeScript'] },
+        { name: 'Single SPA', icon: techIcons['Single SPA'] },
     ],
     achievements: [
       'Built and launched over 15 responsive websites for clients across various industries.',

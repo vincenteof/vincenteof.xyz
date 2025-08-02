@@ -1,7 +1,7 @@
 ## 布局
 header + main intro + contact
 experience
-tech stack
+tech stack (直接图片 + tooltip 展示)
 projects
 blogs
 setup(optional)
