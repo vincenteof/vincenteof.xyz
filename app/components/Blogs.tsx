@@ -15,14 +15,14 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <article
               key={blog.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               {blog.coverImage && (
                 <div className="aspect-video w-full overflow-hidden">
                   <img
                     src={blog.coverImage}
                     alt={blog.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               )}
