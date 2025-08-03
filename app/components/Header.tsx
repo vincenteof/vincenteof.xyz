@@ -7,7 +7,7 @@ const Header = () => {
   // todo: border-primary/5
   return (
     <header className="fixed top-5 left-0 right-0 z-50 transition-all duration-300">
-      <div className="w-sm lg:container mx-auto transition-all duration-500 ease-in-out">
+      <div className="w-sm lg:container mx-auto transition-all duration-500 ease-in-out px-4">
         <nav className="flex items-center justify-between rounded-xl px-4 py-3 bg-white/80 backdrop-blur-lg border border-primary/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
           <a
             href="#"

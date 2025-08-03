@@ -18,7 +18,7 @@ import Tag from './Tag';
 
 const Hero = () => {
   return (
-    <section className="pt-24 pb-12 md:pt-60 md:pb-20">
+    <section className="px-4 pt-24 pb-12 md:pt-60 md:pb-20">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <div className="col-span-8 place-self-center text-center sm:text-left justify-self-start">
           <h1 className="mb-4 text-3xl sm:text-5xl xl:text-6xl 2xl:text-8xl lg:leading-normal font-extrabold flex flex-col">
