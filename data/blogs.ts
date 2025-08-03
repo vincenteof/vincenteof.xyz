@@ -1,14 +1,32 @@
-export const blogs = [
+export interface Blog {
+  id: string
+  title: string
+  description: string
+  date: string
+  slug: string
+  tags: string[]
+  coverImage?: string
+  readingTime?: string
+}
+
+export const blogs: Blog[] = [
   {
-    title: 'My First Blog Post',
-    description: 'This is the summary of my first blog post.',
+    id: '1',
+    title: 'Building a Modern Portfolio with Next.js',
+    description:
+      'A deep dive into creating a performant and beautiful portfolio website using Next.js 13, React and Tailwind CSS.',
     date: '2025-07-30',
-    link: '#',
+    slug: 'building-modern-portfolio-nextjs',
+    tags: ['Next.js', 'React', 'Tailwind CSS'],
+    readingTime: '5 min read',
   },
   {
-    title: 'Learning Next.js',
-    description: 'A post about my journey learning Next.js.',
+    id: '2',
+    title: 'Understanding TypeScript Generic Types',
+    description: `Exploring TypeScript's generic types and how they can make your code more reusable and type-safe.`,
     date: '2025-07-25',
-    link: '#',
+    slug: 'understanding-typescript-generic-types',
+    tags: ['TypeScript', 'Programming'],
+    readingTime: '8 min read',
   },
-];
+]
