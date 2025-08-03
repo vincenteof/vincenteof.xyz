@@ -51,10 +51,13 @@ const Hero = () => {
               <AiOutlineFileText className="mr-2" />
               Resume/CV
             </button>
-            <button className="outline-none px-3 py-2 text-sm w-full sm:w-fit rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 hover:bg-gradient-to-bl hover:cursor-pointer text-white flex items-center transition-all duration-300 ease-in-out">
+            <a 
+              href="#contact"
+              className="outline-none px-3 py-2 text-sm w-full sm:w-fit rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 hover:bg-gradient-to-bl hover:cursor-pointer text-white flex items-center justify-center transition-all duration-300 ease-in-out"
+            >
               <LuSend className="mr-2" />
               Send Message
-            </button>
+            </a>
           </div>
           <div className="flex items-center gap-4 mt-6">
             <a
