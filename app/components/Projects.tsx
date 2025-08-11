@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-12 sm:py-16">
       <h2 className="text-3xl font-bold text-center mb-4">Featured Projects</h2>
       <p className="text-lg text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
         Here are some of the projects I'm proud to have worked on. 

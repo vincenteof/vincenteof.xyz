@@ -8,7 +8,7 @@ import Tag from './Tag';
 
 const TechStack = () => {
   return (
-    <section id="tech-stack" className="py-20">
+    <section id="tech-stack" className="py-12 sm:py-16">
       <h2 className="text-3xl font-bold text-center mb-4">Tech Stack</h2>
       <p className="text-lg text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
         A curated list of technologies I'm proficient with and use in my projects.

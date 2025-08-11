@@ -6,11 +6,14 @@ import { HiArrowRight } from 'react-icons/hi'
 
 const Blogs = () => {
   return (
-    <section id="blogs" className="py-16">
+    <section id="blogs" className="py-12 sm:py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-center mb-4">
           Latest Blog Posts
         </h2>
+        <p className="text-lg text-center text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-12">
+          My recent thoughts feature a variety of topics.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogs.map((blog) => (
             <article
@@ -48,11 +51,11 @@ const Blogs = () => {
                   </time>
                   {blog.readingTime && <span>{blog.readingTime}</span>}
                 </div>
-                <Link 
+                <Link
                   href={`/blog/${blog.slug}`}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors group"
                 >
-                  Read More 
+                  Read More
                   <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
