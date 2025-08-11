@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       };
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+    <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
       <div className="relative h-48 w-full">
         <Image
           src={project.image}

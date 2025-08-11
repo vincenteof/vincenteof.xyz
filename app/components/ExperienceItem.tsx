@@ -33,7 +33,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience }) => {
   const linkedinTooltipId = `${companyId}-linkedin-tooltip`;
 
   return (
-    <div className="mb-12 last:mb-0 p-8 sm:p-10 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+    <div className="mb-12 last:mb-0 p-8 sm:p-10 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
       {/* Part 1: Company Info, Role, Date, Location */}
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2 sm:gap-4">
         <div className="flex items-start">

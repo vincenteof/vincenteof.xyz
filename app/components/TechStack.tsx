@@ -15,7 +15,7 @@ const TechStack = () => {
       </p>
       <div className="container mx-auto px-4">
         {/* Large Card Container */}
-        <div className="p-8 sm:p-10 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+        <div className="p-8 sm:p-10 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             {skillCategories.map((category, index) => (
               <div key={index}>

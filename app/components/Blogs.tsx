@@ -18,7 +18,7 @@ const Blogs = () => {
           {blogs.map((blog) => (
             <article
               key={blog.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
             >
               {blog.coverImage && (
                 <div className="aspect-video w-full overflow-hidden">

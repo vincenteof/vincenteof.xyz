@@ -107,7 +107,7 @@ const Contact = () => {
           </div>
 
           {/* Right Column - Contact Form */}
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700 p-8 sm:p-10">
+          <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-8 sm:p-10">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label 
