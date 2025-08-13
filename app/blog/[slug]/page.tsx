@@ -1,7 +1,9 @@
 import React from 'react'
 import { blogs } from '@/data/blogs'
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 import Tag from '@/app/components/Tag'
+import { HiArrowLeft } from 'react-icons/hi'
 
 interface BlogPageProps {
   params: {
@@ -23,12 +25,22 @@ export default function BlogPage({ params }: BlogPageProps) {
   }
 
   return (
-    <article className="container mx-auto px-4 py-16 max-w-4xl">
-      <header className="mb-12">
-        <div className="flex flex-wrap gap-2 mb-4">
-          {blog.tags.map((tag) => (
-            <Tag key={tag} text={tag} />
-          ))}
+    <article className="min-h-screen pt-28 pb-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back button */}
+        <Link 
+          href="/blog"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 mb-8 group transition-colors"
+        >
+          <HiArrowLeft className="group-hover:-translate-x-1 transition-transform" />
+          Back to Blog
+        </Link>
+      
+        <header className="mb-12">
+          <div className="flex flex-wrap gap-2 mb-4">
+            {blog.tags.map((tag) => (
+              <Tag key={tag} text={tag} />
+            ))}
         </div>
         <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
         <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400">
@@ -59,6 +71,7 @@ export default function BlogPage({ params }: BlogPageProps) {
         <p className="text-lg text-gray-700 dark:text-gray-300">
           {blog.description}
         </p>
+      </div>
       </div>
     </article>
   )
