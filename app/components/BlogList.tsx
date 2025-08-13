@@ -14,13 +14,13 @@ const BlogList = ({ posts }: BlogListProps) => {
   const [isGridView, setIsGridView] = useState(true)
 
   const renderBlogCard = (blog: BlogFrontmatter & { slug: string }) => (
-    <Link href={`/blog/${blog.slug}`} className="block group">
+    <Link href={`/blog/${blog.slug}`} className="block group h-full">
       <article
         key={blog.slug}
-        className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden transition-shadow duration-300 cursor-pointer hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
+        className="h-full flex flex-col bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden transition-shadow duration-300 cursor-pointer hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
       >
         {blog.coverImage && (
-          <div className="aspect-video w-full overflow-hidden">
+          <div className="aspect-video w-full overflow-hidden shrink-0">
             <img
               src={blog.coverImage}
               alt={blog.title}
@@ -28,19 +28,19 @@ const BlogList = ({ posts }: BlogListProps) => {
             />
           </div>
         )}
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
           <div className="flex flex-wrap gap-2 mb-4">
             {blog.tags.map((tag) => (
               <Tag key={tag} text={tag} />
             ))}
           </div>
-          <h2 className="text-xl font-bold mb-2 text-gray-700 dark:text-gray-300 transition-colors group-hover:text-gray-900 dark:group-hover:text-gray-100">
+          <h2 className="text-xl font-bold mb-2 text-gray-700 dark:text-gray-300 transition-colors group-hover:text-gray-900 dark:group-hover:text-gray-100 min-h-[56px]">
             {blog.title}
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+          <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3 flex-grow min-h-[72px]">
             {blog.description}
           </p>
-          <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+          <div className="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400 mt-auto">
             <time>
               {new Date(blog.date).toLocaleDateString('en-US', {
                 year: 'numeric',
