@@ -1,18 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next'
+import { Inter, Meow_Script } from 'next/font/google'
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
-  title: "Vincenteof | Fullstack Developer",
-  description: "Portfolio of Vincenteof, a Fullstack Developer specializing in modern web technologies.",
-};
+  title: 'Vincenteof | Fullstack Developer',
+  description:
+    'Portfolio of Vincenteof, a Fullstack Developer specializing in modern web technologies.',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
@@ -20,5 +22,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  );
+  )
 }

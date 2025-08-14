@@ -3,6 +3,10 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import { Meow_Script } from 'next/font/google'
+
+const meow = Meow_Script({ subsets: ['latin'], weight: '400', display: 'swap' })
+// const rouge = Rouge_Script({ subsets: ['latin'], weight: '400', display: 'swap' })
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -55,8 +59,8 @@ const Header = () => {
                   className="size-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </span>
-              <span className="italic text-sm sm:text-base bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-blue-500">
-                VINCENTEOF
+              <span className={`${meow.className} text-3xl`}>
+                Vincenteof
               </span>
             </a>
 
