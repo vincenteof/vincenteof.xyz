@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import { HiMenuAlt3, HiX, HiMoon, HiSun } from 'react-icons/hi'
 import { Meow_Script } from 'next/font/google'
 
 const meow = Meow_Script({ subsets: ['latin'], weight: '400', display: 'swap' })
@@ -11,8 +11,28 @@ const meow = Meow_Script({ subsets: ['latin'], weight: '400', display: 'swap' })
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  const toggleDarkMode = () => {
+    const html = document.documentElement
+    const shouldEnableDark = !html.classList.contains('dark')
+    setIsDarkMode(shouldEnableDark)
+    if (shouldEnableDark) {
+      html.classList.add('dark')
+    } else {
+      html.classList.remove('dark')
+    }
+  }
+
+  useEffect(() => {
+    // 检查系统主题偏好
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setIsDarkMode(true)
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +65,7 @@ const Header = () => {
         `}
       >
         <div className="px-4">
-          <nav className="flex items-center justify-between rounded-xl px-4 py-3 bg-white/80 backdrop-blur-lg border border-primary/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
+          <nav className="flex items-center justify-between rounded-xl px-4 py-3 bg-white/80 backdrop-blur-lg border border-gray-700/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
             <a
               href="#"
               className="text-lg relative group flex items-center gap-2"
@@ -59,27 +79,39 @@ const Header = () => {
                   className="size-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </span>
-              <span className={`${meow.className} text-3xl`}>
-                Vincenteof
-              </span>
+              <span className={`${meow.className} text-3xl`}>Vincenteof</span>
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 items-center">
               {menuItems.map((item) => (
                 <a key={item.href} href={item.href} className={linkClasses}>
                   {item.label}
                 </a>
               ))}
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? <HiSun size={20} /> : <HiMoon size={20} />}
+              </button>
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className="md:hidden text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
-            >
-              {isMenuOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
-            </button>
+            <div className="md:hidden flex items-center gap-2">
+              <button
+                onClick={toggleMenu}
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
+              >
+                {isMenuOpen ? <HiX size={24} /> : <HiMenuAlt3 size={24} />}
+              </button>
+              <button
+                onClick={toggleDarkMode}
+                className="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+                aria-label="Toggle dark mode"
+              >
+                {isDarkMode ? <HiSun size={20} /> : <HiMoon size={20} />}
+              </button>
+            </div>
           </nav>
         </div>
 
@@ -87,7 +119,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 mt-2">
             <div className="px-4">
-              <div className="flex flex-col space-y-4 px-4 py-6 rounded-xl bg-white/80 backdrop-blur-lg border border-primary/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
+              <div className="flex flex-col space-y-4 px-4 py-6 rounded-xl bg-white/80 backdrop-blur-lg border border-gray-700/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
                 {menuItems.map((item) => (
                   <a
                     key={item.href}
