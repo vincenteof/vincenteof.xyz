@@ -53,19 +53,19 @@ const Header = () => {
   ]
 
   const linkClasses =
-    'relative py-2 text-gray-800 dark:text-gray-200 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-cyan-500 after:to-blue-500 hover:after:w-full after:transition-all after:duration-300'
+    'relative py-2 text-[var(--text-primary)] hover:text-[var(--accent)] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-[var(--accent)] hover:after:w-full after:transition-all after:duration-300'
 
   return (
-    <header className="fixed top-5 left-0 right-0 z-50 transition-all duration-300">
+    <header className="fixed top-5 left-0 right-0 z-50">
       <div
         className={`
           mx-auto px-4 sm:px-2 lg:px-8 
-          transition-all duration-500 ease-in-out
+          header-transitions
           ${isScrolled ? 'max-w-7xl' : 'max-w-[100rem]'}
         `}
       >
         <div className="px-4">
-          <nav className="flex items-center justify-between rounded-xl px-4 py-3 bg-white/80 backdrop-blur-lg border border-gray-700/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
+          <nav className="flex items-center justify-between rounded-xl px-4 py-3 bg-[var(--card-bg)]/80 dark:bg-[var(--card-bg)]/80 backdrop-blur-lg border border-gray-700/5 dark:border-[var(--border-default)] shadow-[0_5px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_5px_30px_rgba(0,0,0,0.2)] header-transitions">
             <a
               href="#"
               className="text-lg relative group flex items-center gap-2"
@@ -79,7 +79,7 @@ const Header = () => {
                   className="size-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
               </span>
-              <span className={`${meow.className} text-3xl`}>Vincenteof</span>
+              <span className={`${meow.className} text-3xl text-[var(--text-primary)]`}>Vincenteof</span>
             </a>
 
             {/* Desktop Menu */}
@@ -119,7 +119,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 mt-2">
             <div className="px-4">
-              <div className="flex flex-col space-y-4 px-4 py-6 rounded-xl bg-white/80 backdrop-blur-lg border border-gray-700/5 shadow-[0_5px_30px_rgba(0,0,0,0.03)]">
+              <div className="flex flex-col space-y-4 px-4 py-6 rounded-xl bg-[var(--card-bg)]/80 dark:bg-[var(--card-bg)]/80 backdrop-blur-lg border border-gray-700/5 dark:border-[var(--border-default)] shadow-[0_5px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_5px_30px_rgba(0,0,0,0.2)] header-transitions">
                 {menuItems.map((item) => (
                   <a
                     key={item.href}
