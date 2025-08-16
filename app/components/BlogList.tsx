@@ -14,7 +14,7 @@ const BlogList = ({ posts }: BlogListProps) => {
   const [isGridView, setIsGridView] = useState(true)
 
   const renderBlogCard = (blog: BlogFrontmatter & { slug: string }) => (
-    <Link href={`/blog/${blog.slug}`} className="block group h-full">
+    <Link href={`/blogs/${blog.slug}`} className="block group h-full">
       <article
         key={blog.slug}
         className="h-full flex flex-col bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden transition-shadow duration-300 cursor-pointer hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
@@ -56,7 +56,7 @@ const BlogList = ({ posts }: BlogListProps) => {
   )
 
   const renderBlogListItem = (blog: BlogFrontmatter & { slug: string }) => (
-    <Link href={`/blog/${blog.slug}`} className="block group">
+    <Link href={`/blogs/${blog.slug}`} className="block group">
       <article
         key={blog.slug}
         className="flex items-start py-6 first:pt-0 border-b border-gray-200 dark:border-gray-700 last:border-0 cursor-pointer"

@@ -39,7 +39,7 @@ const Blogs = async () => {
                   ))}
                 </div>
                 <h3 className="text-xl font-bold mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  <Link href={`/blogs/${post.slug}`}>{post.title}</Link>
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                   {post.description}
@@ -55,7 +55,7 @@ const Blogs = async () => {
                   {post.readingTime && <span>{post.readingTime}</span>}
                 </div>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/blogs/${post.slug}`}
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors group"
                 >
                   Read More
@@ -67,7 +67,7 @@ const Blogs = async () => {
         </div>
         <div className="text-center mt-12">
           <Link
-            href="/blog"
+            href="/blogs"
             className="inline-flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-white border border-gray-200 text-gray-800 shadow-xs hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 transition-all duration-300 ease-in-out"
           >
             View All Posts

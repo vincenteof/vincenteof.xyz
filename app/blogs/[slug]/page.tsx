@@ -30,11 +30,11 @@ export default async function BlogPage({ params }: BlogPageProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back button */}
         <Link
-          href="/blog"
+          href="/blogs"
           className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 mb-8 group transition-colors"
         >
           <HiArrowLeft className="group-hover:-translate-x-1 transition-transform" />
-          Back to Blog
+          Back to Blogs
         </Link>
 
         <header className="mb-12">
