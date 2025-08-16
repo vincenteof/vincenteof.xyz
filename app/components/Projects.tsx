@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import { HiArrowRight } from 'react-icons/hi';
 import { projects } from '@/data/projects';
 import ProjectCard from './ProjectCard';
 
@@ -18,12 +20,15 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      {/* Optional: Add a "View All" button if you have more projects on a separate page */}
-      {/* <div className="text-center mt-12">
-        <a href="/projects" className="text-lg font-medium text-cyan-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+      <div className="text-center mt-12">
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-white border border-gray-200 text-gray-800 shadow-xs hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-700 transition-all duration-300 ease-in-out"
+        >
           View All Projects
-        </a>
-      </div> */}
+          <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
     </section>
   );
 };

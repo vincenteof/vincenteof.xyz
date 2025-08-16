@@ -61,7 +61,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-4 mt-6">
             <a
-              href="https://github.com"
+              href="https://github.com/vincenteof"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500"
@@ -71,7 +71,7 @@ const Hero = () => {
             </a>
             <Tooltip id="github-tooltip" content="GitHub" place="top" />
             <a
-              href="https://x.com"
+              href="https://x.com/vincenteof"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500"
@@ -91,7 +91,7 @@ const Hero = () => {
             </a>
             <Tooltip id="linkedin-tooltip" content="LinkedIn" place="top" />
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:vincenteofchen@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500"
