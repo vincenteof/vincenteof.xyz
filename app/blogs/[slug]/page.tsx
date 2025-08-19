@@ -5,11 +5,7 @@ import Link from 'next/link'
 import Tag from '@/app/components/Tag'
 import { HiArrowLeft } from 'react-icons/hi'
 
-interface BlogPageProps {
-  params: {
-    slug: string
-  }
-}
+type BlogPageParams = Promise<{ slug: string }>
 
 export async function generateStaticParams() {
   const posts = await getAllPosts()
@@ -18,8 +14,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function BlogPage({ params }: BlogPageProps) {
-  const post = await getPostBySlug(params.slug)
+export default async function BlogPage({ params }: { params: BlogPageParams }) {
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
 
   if (!post) {
     notFound()
