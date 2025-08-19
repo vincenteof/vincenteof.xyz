@@ -14,17 +14,16 @@ export const projects = [
     githubUrl: 'https://github.com/vincenteof/vincenteof.xyz',
     status: 'Live & Maintained',
   },
-  // {
-  //   title: 'Mad Lads NFT Staking Platform',
-  //   description: 'A decentralized application (dApp) for staking Mad Lads NFTs. Users can connect their wallet, stake their NFTs, and earn rewards over time, interacting directly with a smart contract.',
-  //   tags: [
-  //     { name: 'React', icon: techIcons['React'] },
-  //     { name: 'Solidity', icon: techIcons['Solidity'] },
-  //     { name: 'Node.js', icon: techIcons['Node.js'] },
-  //   ],
-  //   image: '/images/MAD_LADS_8853.PNG', // Replace with actual project image
-  //   liveUrl: '#', // Add live URL if available
-  //   githubUrl: '#', // Add GitHub URL
-  //   status: 'Proof of Concept',
-  // },
+  {
+    title: 'Solidity Calldata Visualizer',
+    description: 'A tool for visualizing Solidity calldata, making it easier to understand and debug smart contract interactions.',
+    tags: [
+      { name: 'React', icon: techIcons['React'] },
+      { name: 'Viem', icon: techIcons['Viem'] },
+    ],
+    image: '/images/solidity-calldata-visualization.png', // Replace with actual project image
+    liveUrl: 'https://solidity-calldata-visualization.vercel.app/', // Add live URL if available
+    githubUrl: 'https://github.com/vincenteof/solidity-calldata-visualization', // Add GitHub URL
+    status: 'Proof of Concept',
+  },
 ];
