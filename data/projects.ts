@@ -9,7 +9,7 @@ export const projects = [
       { name: 'React', icon: techIcons['React'] },
       { name: 'TypeScript', icon: techIcons['TypeScript'] },
     ],
-    image: '/images/vincenteof.jpg', // Replace with actual project image
+    image: '/images/vincenteof-xyz.png', // Replace with actual project image
     liveUrl: '/',
     githubUrl: 'https://github.com/vincenteof/vincenteof.xyz',
     status: 'Live & Maintained',
